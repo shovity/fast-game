@@ -1,0 +1,36 @@
+extends masterLayout
+
+block head
+	link(rel='stylesheet' href='stylesheets/client.css')
+
+block body
+	.col-md-6.col-md-offset-3
+		#header XỨ TRẠI VÀNG
+			image.lgl(src='/images/lg.png')
+			//- image.lgr(src='/images/lg.png')
+
+		#stat
+			#statName name
+			#statTime 30s
+			#statPoint 100
+
+		#questBox Nhấn 2 lần vào đáp án để trả lời
+
+		#answerBox
+			#a.answer A:
+			#b.answer B:
+			#c.answer C:
+			#d.answer D:
+
+	#chatBox
+		
+		span#chatAnchor.glyphicon.glyphicon-chevron-up
+		#chatContent
+			#chatMeg
+		.input-group#ig
+			span.input-group-btn
+				input.form-control(type='text', id='meg', placeholder='Nhập tin nhắn...')
+				button.btn.btn-default(id='send') Gửi
+				
+block footer
+	script(src='javascripts/client.js')

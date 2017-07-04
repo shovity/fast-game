@@ -1,0 +1,21 @@
+extends masterLayout
+block head
+	style body {background: #f5f5f5; padding: 20px}
+block body
+	br
+	.col-md-6.col-md-offset-3
+		#al
+		if error
+			.alert.alert-danger= error
+		br
+		form(action='/' method='post' autocomplete="off")
+			legend Đăng Nhập
+			label Tên hiển thị
+			input.form-control#username(name='username')
+			label Mã
+			input.form-control#token(name='token')
+			input#submit(type='submit' hidden)
+			br
+		button.btn.btn-success.pull-right#login Đăng Nhập
+block footer
+	script(src='/javascripts/home.js')

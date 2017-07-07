@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-	
+
 	// Config
-	const timeOut = 30 // s
-		
+	const timeOut = 10 // s
+
 	var	isPlay = false,
 		answerFocus = '',
 		myAnswer = '',
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			//
 		} else {
 			var	timeIt = setInterval(tick, 1000)
-		
+
 			time = timeOut
 			addPoint = 0
 			answerFocus = ''
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			function tick() {
 				statTime.innerHTML = time + 's';
 
-			
+
 				if (time-- <= 0) {
 					clearInterval(timeIt)
 					isPlay = false

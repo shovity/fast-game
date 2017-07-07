@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	var socket = io(),
 		username = getCookie('username'),
-		timeOut = 30,
+		timeOut = 10,
 		isPlay = false,
 	isEnded = true
 
@@ -115,14 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			function tick() {
 				statTime.innerHTML = time + 's';
-			
+
 				if (time-- <= 0) {
 					isPlay = false
 					clearInterval(timeIt)
 					statTime.innerHTML = 'Hết giờ'
 				}
 			}
-		}	
+		}
 	})
 
 	socket.on('end', (result) => {

@@ -4,7 +4,7 @@
 
 module.exports = [
 	{
-		"content": "Chu cai dau tien trong bang chu cai tien anh la",
+		"content": "Chu cai dau tien trong bang chu cai tieng anh la",
 		"a":"b",
 		"b": "a",
 		"c": "d",
@@ -12,7 +12,7 @@ module.exports = [
 		"true": "b"
 	},
 	{
-		"content": "Chu cai dau tien trong bang chu cai tien anh la 2",
+		"content": "Chu cai dau tien trong bang chu cai tieng anh la 2",
 		"a":"b",
 		"b": "a",
 		"c": "d",

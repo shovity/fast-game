@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 	// Config
-	const timeOut = 10 // s
+	const timeOut = 60 // s
 
 	var	isPlay = false,
 		answerFocus = '',
@@ -67,6 +67,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (e.keyCode == 13) {
 			send.click()
 			meg.value = ''
+		}
+	})
+
+	socket.on('wave session', (session) => {
+		console.log('master check session to reset point');
+		// check session
+		const mySession = getCookie('session_token')
+		if (!mySession || mySession !== session) {
+			console.log('session not match, reseting...');
+			// set point to 0
+			setCookie('point', Math.random().toString(36).substr(2, 3) + 0 + Math.random().toString(36).substr(2, 4), 1)
+			// set session token
+			setCookie('session_token', session)
+			// update
+			location.reload()
 		}
 	})
 

@@ -11,7 +11,7 @@ block body
 
 		#stat
 			#statName name
-			#statTime 10s
+			#statTime 60s
 			#statPoint 100
 
 		#questBox Nhấn 2 lần vào đáp án để trả lời
@@ -23,7 +23,7 @@ block body
 			#d.answer D:
 
 	#chatBox
-		
+
 		span#chatAnchor.glyphicon.glyphicon-chevron-up
 		#chatContent
 			#chatMeg
@@ -31,6 +31,6 @@ block body
 			span.input-group-btn
 				input.form-control(type='text', id='meg', placeholder='Nhập tin nhắn...')
 				button.btn.btn-default(id='send') Gửi
-				
+
 block footer
 	script(src='javascripts/client.js')

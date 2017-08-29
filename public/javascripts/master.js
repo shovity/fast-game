@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	var socket = io(),
 		username = getCookie('username'),
-		timeOut = 10,
+		timeOut = 60,
 		isPlay = false,
 	isEnded = true
 
@@ -82,6 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		chatContent.scrollTop = chatContent.scrollHeight;
 		socket.emit('meg master', { username, meg: meg.value })
 		meg.value = ''
+	})
+
+	reset.addEventListener('click', () => {
+		socket.emit('reset point')
 	})
 
 	meg.addEventListener('keyup', (e) => {

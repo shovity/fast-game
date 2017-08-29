@@ -84,7 +84,7 @@ body {
 }
 
 #answerBox {
-	
+
 }
 
 .answer {
@@ -117,7 +117,7 @@ body {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 	background: red;
 	position: absolute;
-	left: calc(100% - 70px);
+	left: calc(50% - 70px);
 	top: -30px;
 
 	text-align: center;

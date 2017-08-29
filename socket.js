@@ -2,12 +2,22 @@ const io = require('socket.io')(),
 	quests = require('./datas/quest')
 
 var currentQuest = null,
-	users = []
+	users = [],
+	session = Math.random().toString(36).substr(2, 7); // seed random session token
 
 io.on('connection', (socket) => {
 
 	console.log(`${socket.id} connected`)
 	socket.emit('who are you')
+
+	socket.emit('wave session', session)
+
+	// Change session to reset all point
+	socket.on('reset point', () => {
+		session = Math.random().toString(36).substr(2, 7)
+		socket.broadcast.emit('wave session', session)
+		console.log('reset point', session);
+	})
 
 	// update
 	socket.on('update', (data) => {

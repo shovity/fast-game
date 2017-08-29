@@ -9,28 +9,32 @@ block body
 		legend(style='color:#fff') Mater Droadboad
 		label(style='color:#fff') Câu hỏi (1 - #{quest.length})
 		input.form-control.ff(type='number', id='questNum')
-		button.btn.btn-info.ff(id='start') Bắt đầu
+		button.btn.btn-success.ff(id='start') Bắt đầu
 		br
-		button.btn.btn-primary.ff#end Đáp án
+		button.btn.btn-info.ff#end Đáp án
+		br
+		button.btn.btn-primary.ff#reset Reset point
 		br
 		a.btn.btn-danger.ff(href='/o') logout
 
-	.col-sm-5
-		#statTime(style='color:#fff') 10s
-		#questBox(style='padding: 30px; margin: 20px' ) Nhấn 2 lần vào đáp án để trả lời
+	.col-sm-10
 
-		#answerBox
-			#a.answer(style='padding: 20px 30px; margin: 20px' ) A:
-			#b.answer(style='padding: 20px 30px; margin: 20px' ) B:
-			#c.answer(style='padding: 20px 30px; margin: 20px' ) C:
-			#d.answer(style='padding: 20px 30px; margin: 20px' ) D:
-		
-	.col-sm-5
-		.panel.panel-default
-			.panel-heading BXH
-			.panel-body(style="max-height: calc(100vh - 120px);overflow: auto;padding: 0; margin-top:-1px")
-				table.table.table-hover
-					tbody#listUsers
+		.col-sm-12
+			#statTime(style='color:#fff') 60s
+			#questBox(style='padding: 30px; margin: 20px' ) Nhấn 2 lần vào đáp án để trả lời
+
+			#answerBox
+				#a.answer(style='padding: 20px 30px; margin: 20px' ) A:
+				#b.answer(style='padding: 20px 30px; margin: 20px' ) B:
+				#c.answer(style='padding: 20px 30px; margin: 20px' ) C:
+				#d.answer(style='padding: 20px 30px; margin: 20px' ) D:
+
+		.col-sm-12
+			.panel.panel-default
+				.panel-heading BXH
+				.panel-body(style="max-height: calc(100vh - 120px);overflow: auto;padding: 0; margin-top:-1px")
+					table.table.table-hover
+						tbody#listUsers
 
 		//- chat
 		#chatBox
